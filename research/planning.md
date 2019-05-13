@@ -1,16 +1,36 @@
 ## Battleship game
 
-1. Acquire images/design mockup
+### Description
 
-2. Start creating battleship object/class
+Play vs AI or invite a friend to play 1v1.
+Play single shot or salvo mode.
 
-3. Build front end capable of displaying game.
+### ToDo
 
-4. Design AI system for playing solo
+1. Day 1 => develop node server
 
-5. Incorporate sockets for playing pvp
+- [ ] Set up express/db
+- [ ] Install and configure socket.io
+- [ ] Design flow for new game, invite friend, place ships
+- [ ] Design flow for shot info relay to server/evaluation
+- [ ] Set up win/lose conditions
 
-6. Build server
+2. Day 2 => develop front end
+
+- [ ] Set up React App
+- [ ] Style board/page layout
+- [ ] Develop UI to receive board object and render updated state of game
+- [ ] Hit/Miss/Sink Notification/Animation
+- [ ] Test
+
+3. Day 3 => connect client to server, develop logic
+
+- [ ] Set up data exchange using socket.io
+- [ ] Set up new game/join game screens
+
+4. Day 4 => bug fix/testing coverage/ refactor
+
+5. Day 5 => Polish/test/deploy
 
 ## Resources
 
