@@ -2,7 +2,7 @@ class Board {
   constructor(player, board) {
     this.player = player
     this.board = board
-    this.boatsRemaining = 5
+    this.shipsRemaining = 5
     this.hitsRemaining = 17
   }
 
@@ -14,7 +14,7 @@ class Board {
 
   // check if all boats sunk, return true if player has lost all boats
   evaluateLoss() {
-    if (this.hitsRemaining === 0 && this.boatsRemaining === 0) {
+    if (this.hitsRemaining === 0 && this.shipsRemaining === 0) {
       return true
     } else {
       return false
@@ -34,3 +34,11 @@ let board = {
   I: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   J: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 }
+
+let ships = [
+  { name: 'carrier', hits: 5 },
+  { name: 'battleship', hits: 4 },
+  { name: 'submarine', hits: 3 },
+  { name: 'destroyer', hits: 3 },
+  { name: 'patrol', hits: 2 }
+]
