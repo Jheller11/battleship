@@ -1,0 +1,20 @@
+/* needs to denote fired at and hit */
+.hitSquare {
+  background-color: red;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* needs to denote fired at and missed */
+.missSquare {
+  background-color: blue;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* ocean color background with nothing extra */
+.blankSquare {
+  background-color: lightblue;
+  height: 1.5rem;
+  width: 1.5rem;
+}

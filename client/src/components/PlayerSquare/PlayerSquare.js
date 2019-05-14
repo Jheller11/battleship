@@ -2,7 +2,14 @@ import React from 'react'
 import styles from './PlayerSquare.module.css'
 
 const Square = props => {
-  return <div>S</div>
+  switch (props.data) {
+    case 'h':
+      return <div className={styles.hitSquare} />
+    case 'm':
+      return <div className={styles.missSquare} />
+    default:
+      return <div className={styles.blankSquare} />
+  }
 }
 
 export default Square

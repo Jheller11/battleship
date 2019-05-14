@@ -20,7 +20,7 @@ class Game extends Component {
   render() {
     return (
       <div>
-        <PlayerBoard board={['hit', 'miss', 'unknown']} />
+        <PlayerBoard board={['h', 'm', '']} />
         {/* <OpponentBoard /> */}
         {/* <Chat /> */}
         {/* <ShipDisplay /> */}
