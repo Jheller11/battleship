@@ -8,7 +8,8 @@ class Game extends Component {
     this.state = {
       inGame: true,
       game: null,
-      gameID: this.props.match.params.id || 0
+      gameID: this.props.match.params.id || 0,
+      player1: true
     }
   }
 
@@ -31,3 +32,20 @@ class Game extends Component {
 }
 
 export default Game
+
+const game = {
+  player1: {
+    name: 'player1',
+    ships: ['car', 'bat', 'sub', 'des', 'pat'],
+    turn: true,
+    shots: [],
+    shipSetup: []
+  },
+  player2: {
+    name: 'player2',
+    ships: ['car', 'bat', 'sub', 'des', 'pat'],
+    turn: false,
+    shots: [],
+    shipSetup: []
+  }
+}

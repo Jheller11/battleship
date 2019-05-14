@@ -7,8 +7,8 @@ const Board = props => {
   console.log(props)
   return (
     <div>
-      {props.board.map(square => {
-        return <PlayerSquare data={square} />
+      {props.board.map((square, i) => {
+        return <PlayerSquare key={i} data={square} />
       })}
     </div>
   )
