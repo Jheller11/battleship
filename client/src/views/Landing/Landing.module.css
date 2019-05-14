@@ -1,7 +1,7 @@
 .landingPage {
   min-height: 100vh;
   min-width: 100%;
-  background-color: #058ed9;
+  background: url('../../images/nice-snow.png') #058ed9;
   display: flex;
   justify-content: center;
   align-items: center;

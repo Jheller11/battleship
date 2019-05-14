@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Landing.module.css'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
   return (
@@ -9,8 +10,12 @@ const Landing = () => {
         <div>
           <h3>Welcome</h3>
           <p>Welcome to the game</p>
-          <button>Join</button>
-          <button>Create</button>
+          <form>
+            <label htmlFor="gameNumber">Join a game:</label>
+            <input type="text" placeholder="enter game number" />
+            <button type="submit">Join</button>
+          </form>
+          <Link to="/game">Create</Link>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route path="/" exact render={() => <Landing />} />
-        <Route path="/game/:id" exact render={() => <Game />} />
+        <Route path="/game" exact render={() => <Game />} />
       </Switch>
     </div>
   )
