@@ -1,0 +1,14 @@
+.landingPage {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #058ed9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentBox {
+  background-color: whitesmoke;
+  color: #202030;
+  width: 50%;
+}
