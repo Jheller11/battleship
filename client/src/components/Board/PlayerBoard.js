@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from './Board.module.css'
 
-import Square from '../Square/Square'
+import Square from '../PlayerSquare/PlayerSquare'
 
 const Board = props => {
+  console.log(props)
   return (
     <div>
-      {this.props.board.map(square => {
+      {props.board.map(square => {
         return <Square data={square} />
       })}
     </div>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import PlayerBoard from '../../components/PlayerBoard/PlayerBoard'
+
 class Game extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +18,15 @@ class Game extends Component {
   }
 
   render() {
-    return <div>I am the game content</div>
+    return (
+      <div>
+        <PlayerBoard board={['hit', 'miss', 'unknown']} />
+        {/* <OpponentBoard /> */}
+        {/* <Chat /> */}
+        {/* <ShipDisplay /> */}
+        {/* <ShootingForm /> */}
+      </div>
+    )
   }
 }
 

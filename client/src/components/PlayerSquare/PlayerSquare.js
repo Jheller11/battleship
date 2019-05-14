@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Square.module.css'
+import styles from './PlayerSquare.module.css'
 
 const Square = props => {
   return <div>S</div>
