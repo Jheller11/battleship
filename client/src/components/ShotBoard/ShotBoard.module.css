@@ -2,3 +2,18 @@
   display: grid;
   grid-template-columns: repeat(10, 1.5rem);
 }
+
+.numberLine {
+  display: grid;
+  grid-template-columns: repeat(11, 1.5rem);
+}
+
+.letterColumn {
+  display: grid;
+  grid-template-columns: 1.5rem;
+  grid-template-rows: repeat(10, 1.5rem);
+}
+
+.flex {
+  display: flex;
+}
