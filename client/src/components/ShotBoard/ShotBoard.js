@@ -6,10 +6,12 @@ const ShotBoard = props => {
   console.log(props)
   let squares = []
   for (let i = 0; i < 100; i++) {
-    squares.push(<Squares.ShotBoardSquare />)
+    squares.push(<Squares.ShotBoardSquare key={i} />)
   }
   props.shots.forEach(shot => {
-    squares[shot.square] = <Squares.ShotBoardSquare data={shot.hit} />
+    squares[shot.square] = (
+      <Squares.ShotBoardSquare key={shot.square} data={shot.hit} />
+    )
   })
   return (
     <div>
