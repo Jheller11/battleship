@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import PlayerBoard from '../../components/PlayerBoard/PlayerBoard'
+import ShotBoard from '../../components/ShotBoard/ShotBoard'
 
 class Game extends Component {
   constructor(props) {
@@ -31,10 +32,16 @@ class Game extends Component {
       return (
         <div>
           <PlayerBoard board={this.state.game.player1.shipSetup} />
-          {/* <OpponentBoard /> */}
+          <ShotBoard
+            shots={[
+              { square: 0, hit: true },
+              { square: 11, hit: true },
+              { square: 99, hit: false }
+            ]}
+          />
           {/* <Chat /> */}
-          {/* <ShipDisplay /> */}
           {/* <ShootingForm /> */}
+          {/* <Info Panel /> */}
         </div>
       )
     } else {

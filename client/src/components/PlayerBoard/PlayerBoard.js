@@ -1,18 +1,23 @@
 import React from 'react'
 import styles from './PlayerBoard.module.css'
 
-import PlayerSquare from '../PlayerSquare/PlayerSquare'
+import Squares from '../Squares/Squares'
 
 const PlayerBoard = props => {
   let keys = Object.keys(props.board)
   let squares = []
   keys.forEach(key => {
     props.board[key].map((square, i) => {
-      squares.push(<PlayerSquare key={i + key} data={square} />)
+      squares.push(<Squares.PlayerSquare key={i + key} data={square} />)
     })
   })
 
-  return <div className={styles.grid}>{squares}</div>
+  return (
+    <div>
+      <h1>Player Ship Arrangement</h1>
+      <div className={styles.grid}>{squares}</div>
+    </div>
+  )
 }
 
 export default PlayerBoard
