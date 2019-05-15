@@ -1,4 +1,4 @@
-const router = require('express').Router
+const router = require('express').Router()
 const Game = require('../models/Game')
 
 router.get('/:id', (req, res, next) => {

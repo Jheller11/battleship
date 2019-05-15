@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 import PlayerBoard from '../../components/PlayerBoard/PlayerBoard'
 
@@ -8,44 +9,38 @@ class Game extends Component {
     this.state = {
       inGame: true,
       game: null,
-      gameID: this.props.match.params.id || 0,
+      gameID: this.props.match.params.id,
       player1: true
     }
   }
 
   componentDidMount() {
     // establish connection to socket based on url
-    console.log(this.props.match)
+    if (this.state.gameID) {
+      axios
+        .get('http://localhost:4000/games/' + this.state.gameID)
+        .then(res => this.setState({ game: res.data[0] }))
+        .catch(err => console.log(err))
+    } else {
+      alert('no game detected')
+    }
   }
 
   render() {
-    return (
-      <div>
-        <PlayerBoard board={['h', 'm', '']} />
-        {/* <OpponentBoard /> */}
-        {/* <Chat /> */}
-        {/* <ShipDisplay /> */}
-        {/* <ShootingForm /> */}
-      </div>
-    )
+    if (this.state.game) {
+      return (
+        <div>
+          <PlayerBoard board={this.state.game.player1.shipSetup} />
+          {/* <OpponentBoard /> */}
+          {/* <Chat /> */}
+          {/* <ShipDisplay /> */}
+          {/* <ShootingForm /> */}
+        </div>
+      )
+    } else {
+      return <div>no game</div>
+    }
   }
 }
 
 export default Game
-
-const game = {
-  player1: {
-    name: 'player1',
-    ships: ['car', 'bat', 'sub', 'des', 'pat'],
-    turn: true,
-    shots: [],
-    shipSetup: []
-  },
-  player2: {
-    name: 'player2',
-    ships: ['car', 'bat', 'sub', 'des', 'pat'],
-    turn: false,
-    shots: [],
-    shipSetup: []
-  }
-}
