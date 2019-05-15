@@ -14,6 +14,12 @@ app.get('/', (req, res, next) => {
   res.send('Hello World')
 })
 
+// custom error handler
+app.use((err, req, res, next) => {
+  if (err) console.log(err)
+  res.json({ error: err })
+})
+
 // set port
 app.set('port', process.env.PORT || 4000)
 

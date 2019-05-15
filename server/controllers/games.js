@@ -18,3 +18,11 @@ router.post('/new', (req, res, next) => {
 })
 
 module.exports = router
+
+// one => create game -> if no player setup then show screen for setting up ships (with timer)
+// two => post game setup to db
+// three => when both players are ready -> commence game with player1
+
+// shots
+// shooting player enters letter/number combo in form
+// update db/ return updated game/ alert hit or miss or sunk
