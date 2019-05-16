@@ -3,7 +3,6 @@ import styles from './ShotBoard.module.css'
 import Squares from '../Squares/Squares'
 
 const ShotBoard = props => {
-  console.log(props)
   let squares = []
   for (let i = 0; i < 100; i++) {
     squares.push(<Squares.ShotBoardSquare key={i} />)
